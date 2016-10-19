@@ -7071,9 +7071,10 @@ a.text-danger:focus, a.text-danger:hover {
 
 .Card {
   background-color: white;
+  color: #808080;
   position: relative; }
   .Card h3 {
-    color: #0d8995;
+    color: black;
     font-size: 1.5rem;
     font-weight: 200;
     letter-spacing: 1px;
@@ -7090,8 +7091,19 @@ a.text-danger:focus, a.text-danger:hover {
   .\+background-primary .ContentLayer__text h2 {
     color: white; }
 
-.Layer.\--footer {
-  background-color: white; }
+.\+background-primary .ContentLayer__text p {
+  color: white; }
+
+.Layer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto; }
+  .Layer.\--about-aceable {
+    background-image: url("../img/AboutAceable-bg.jpg"); }
+  .Layer.\--footer {
+    background-color: white; }
+  .Layer.\--testimonials {
+    background-image: url("../img/Testimonials-bg.jpg"); }
 
 .MainGraphic__content {
   color: white; }
@@ -7203,6 +7215,7 @@ a.text-danger:focus, a.text-danger:hover {
   font-style: italic; }
 
 .Testimonial__source {
+  color: black;
   font-weight: bold; }
 
 .\+background-primary {

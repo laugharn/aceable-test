@@ -3,6 +3,7 @@ $brand-secondary: darken($brand-primary, 12%);
 $enable-flex: true;
 $enable-rounded: false;
 $gray: #bfbfbf;
+$gray-less-dark: #808080;
 $gray-lightest: #efefef;
 $body-bg: $gray-lightest;
 $list-inline-padding: 1rem;
@@ -19,10 +20,11 @@ $list-inline-padding: 1rem;
     @extend .text-xs-center;
 
     background-color: white;
+    color: $gray-less-dark;
     position: relative;
 
     h3 {
-        color: $brand-secondary;
+        color: black;
         font-size: $font-size-h4;
         font-weight: 200;
         letter-spacing: 1px;
@@ -74,6 +76,10 @@ $list-inline-padding: 1rem;
         p {
             @extend .col-md-8;
             @extend .offset-md-2;
+
+            .\+background-primary & {
+                color: white;
+            }
         }
     }
 }
@@ -81,8 +87,20 @@ $list-inline-padding: 1rem;
 .Layer {
     @extend .p-y-1;
 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    &.\--about-aceable {
+        background-image: url('../img/AboutAceable-bg.jpg');
+    }
+
     &.\--footer {
         background-color: white;
+    }
+
+    &.\--testimonials {
+        background-image: url('../img/Testimonials-bg.jpg');
     }
 }
 
@@ -198,6 +216,7 @@ $list-inline-padding: 1rem;
     }
 
     &__source {
+        color: black;
         font-weight: bold;
     }
 }
