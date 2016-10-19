@@ -1,8 +1,9 @@
 $brand-primary: #12BDCD;
+$brand-secondary: darken($brand-primary, 12%);
 $enable-flex: true;
 $enable-rounded: false;
 $gray: #bfbfbf;
-$gray-lightest: #fafafa;
+$gray-lightest: #efefef;
 $body-bg: $gray-lightest;
 $list-inline-padding: 1rem;
 
@@ -13,56 +14,108 @@ $list-inline-padding: 1rem;
     transition: 256ms all ease-in-out;
 }
 
-.InnerGraphic {
-    @extend .p-a-3;
+.Card {
+    @extend .p-a-1;
     @extend .text-xs-center;
 
-    color: white;
-    margin-bottom: auto;
-    margin-top: auto;
-    width: 100%;
+    background-color: white;
+    position: relative;
 
-    h1 {
-        @extend .m-b-1;
-
-        font-size: $display4-size;
-        font-weight: 100;
+    h3 {
+        color: $brand-secondary;
+        font-size: $font-size-h4;
+        font-weight: 200;
         letter-spacing: 1px;
         text-transform: uppercase;
     }
 
-    &__list {
-        @extend .list-inline;
-
-        &-item {
-            @extend .list-inline-item;
-        }
+    &.\--testimonial {
+        padding-top: ($spacer * 3.5) !important;
     }
 
     &__wrapper {
-        display: flex;
-        position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 0;
+        @extend .col-xs-12;
+        @extend .p-a-1;
+
+        &.\--fourth {
+            @extend .col-md-3;
+        }
+
+        &.\--third {
+            @extend .col-md-4;
+        }
+    }
+}
+
+.Cards {
+    @extend .row;
+}
+
+.ContentLayer {
+    @extend .row;
+
+    &__text {
+        @extend .col-xs-12;
+        @extend .p-y-1;
+        @extend .text-xs-center;
+
+        h2 {
+            color: black;
+            font-size: $font-size-h1;
+            font-weight: 200;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            .\+background-primary & {
+                color: white;
+            }
+        }
+
+        p {
+            @extend .col-md-8;
+            @extend .offset-md-2;
+        }
+    }
+}
+
+.Layer {
+    @extend .p-y-1;
+
+    &.\--footer {
+        background-color: white;
     }
 }
 
 .MainGraphic {
-    background-color: black;
-    background-image: url('../img/main-graphic-bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    position: relative;
-    width: 100%;
+    @extend .row;
 
-    &:before {
-        background-image: radial-gradient(rgba(black, .67), rgba(black, 1));
-        content: '';
-        display: block;
-        padding-top: percentage(1/4);
+    &__content {
+        @extend .col-md-5;
+        @extend .col-xs-12;
+        @extend .p-a-1;
+
+        color: white;
+
+        h1 {
+            font-size: $font-size-h1;
+            font-weight: 200;
+            text-transform: uppercase;
+        }
+    }
+
+    &__video {
+        @extend .col-md-7;
+        @extend .col-xs-12;
+        @extend .p-a-1;
+    }
+
+    &__wrapper {
+        background-color: black;
+        background-image: url('../img/MainGraphic-bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        padding: ($spacer * 2) 0;
     }
 }
 
@@ -127,4 +180,40 @@ $list-inline-padding: 1rem;
     &.\+small {
         font-size: $font-size-sm;
     }
+}
+
+.Testimonial {
+    &__image {
+        border-radius: 50%;
+        display: block;
+        height: ($spacer * 4);
+        position: absolute;
+            top: ($spacer * -1);
+            left: calc(50% - (#{$spacer} * 2));
+        width: ($spacer * 4);
+    }
+
+    &__quote {
+        font-style: italic;
+    }
+
+    &__source {
+        font-weight: bold;
+    }
+}
+
+.Video {
+    @extend .embed-responsive-item;
+
+    &__wrapper {
+        @extend .embed-responsive;
+
+        &.\--16-by-9 {
+            @extend .embed-responsive-16by9;
+        }
+    }
+}
+
+.\+background-primary {
+    background-color: $brand-primary;
 }
