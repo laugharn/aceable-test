@@ -311,7 +311,7 @@ a {
   text-decoration: none; }
   a:focus, a:hover {
     color: #0c7c87;
-    text-decoration: underline; }
+    text-decoration: none; }
   a:focus {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
@@ -2173,7 +2173,7 @@ fieldset[disabled] a.Button {
     border-color: transparent; }
   .btn-link:focus, .btn-link:hover {
     color: #0c7c87;
-    text-decoration: underline;
+    text-decoration: none;
     background-color: transparent; }
   .btn-link:disabled:focus, .btn-link:disabled:hover {
     color: #818a91;
@@ -2187,16 +2187,20 @@ fieldset[disabled] a.Button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem; }
 
-.btn-block {
+.btn-block, .Button.\+block, .Button.\+purchase {
   display: block;
   width: 100%; }
 
-.btn-block + .btn-block {
+.btn-block + .btn-block, .Button.\+block + .btn-block, .Button.\+purchase + .btn-block, .btn-block + .Button.\+block, .Button.\+block + .Button.\+block, .Button.\+purchase + .Button.\+block, .btn-block + .Button.\+purchase, .Button.\+block + .Button.\+purchase, .Button.\+purchase + .Button.\+purchase {
   margin-top: 0.5rem; }
 
-input[type="submit"].btn-block,
+input[type="submit"].btn-block, input[type="submit"].Button.\+block, input[type="submit"].Button.\+purchase,
 input[type="reset"].btn-block,
-input[type="button"].btn-block {
+input[type="reset"].Button.\+block,
+input[type="reset"].Button.\+purchase,
+input[type="button"].btn-block,
+input[type="button"].Button.\+block,
+input[type="button"].Button.\+purchase {
   width: 100%; }
 
 .fade {
@@ -7121,7 +7125,11 @@ a.text-danger:focus, a.text-danger:hover {
   padding: 2rem 0; }
 
 .Nav__link {
+  -webkit-transition: 256ms all ease-in-out;
+  transition: 256ms all ease-in-out;
   color: black; }
+  .Nav__link:hover {
+    color: #12BDCD; }
 
 .Nav__list {
   font-size: 0.875rem;
@@ -7137,37 +7145,6 @@ a.text-danger:focus, a.text-danger:hover {
   -webkit-transition: 256ms all ease-in-out;
   transition: 256ms all ease-in-out;
   text-transform: uppercase; }
-  .Button.\+ghost {
-    color: white;
-    background-image: none;
-    background-color: transparent;
-    border-color: white; }
-    .Button.\+ghost:hover {
-      color: #fff;
-      background-color: white;
-      border-color: white; }
-    .Button.\+ghost:focus, .Button.\+ghost.focus {
-      color: #fff;
-      background-color: white;
-      border-color: white; }
-    .Button.\+ghost:active, .Button.\+ghost.active,
-    .open > .Button.\+ghost.dropdown-toggle {
-      color: #fff;
-      background-color: white;
-      border-color: white; }
-      .Button.\+ghost:active:hover, .Button.\+ghost:active:focus, .Button.\+ghost:active.focus, .Button.\+ghost.active:hover, .Button.\+ghost.active:focus, .Button.\+ghost.active.focus,
-      .open > .Button.\+ghost.dropdown-toggle:hover,
-      .open > .Button.\+ghost.dropdown-toggle:focus,
-      .open > .Button.\+ghost.dropdown-toggle.focus {
-        color: #fff;
-        background-color: #d4d4d4;
-        border-color: #bfbfbf; }
-    .Button.\+ghost.disabled:focus, .Button.\+ghost.disabled.focus, .Button.\+ghost:disabled:focus, .Button.\+ghost:disabled.focus {
-      border-color: white; }
-    .Button.\+ghost.disabled:hover, .Button.\+ghost:disabled:hover {
-      border-color: white; }
-    .Button.\+ghost:hover {
-      color: #12BDCD; }
   .Button.\+global {
     color: white;
     background-color: #12BDCD;
@@ -7199,6 +7176,35 @@ a.text-danger:focus, a.text-danger:hover {
     .Button.\+global.disabled:hover, .Button.\+global:disabled:hover {
       background-color: #12BDCD;
       border-color: #12BDCD; }
+  .Button.\+purchase {
+    color: #0d8995;
+    background-image: none;
+    background-color: transparent;
+    border-color: #0d8995; }
+    .Button.\+purchase:hover {
+      color: #fff;
+      background-color: #0d8995;
+      border-color: #0d8995; }
+    .Button.\+purchase:focus, .Button.\+purchase.focus {
+      color: #fff;
+      background-color: #0d8995;
+      border-color: #0d8995; }
+    .Button.\+purchase:active, .Button.\+purchase.active,
+    .open > .Button.\+purchase.dropdown-toggle {
+      color: #fff;
+      background-color: #0d8995;
+      border-color: #0d8995; }
+      .Button.\+purchase:active:hover, .Button.\+purchase:active:focus, .Button.\+purchase:active.focus, .Button.\+purchase.active:hover, .Button.\+purchase.active:focus, .Button.\+purchase.active.focus,
+      .open > .Button.\+purchase.dropdown-toggle:hover,
+      .open > .Button.\+purchase.dropdown-toggle:focus,
+      .open > .Button.\+purchase.dropdown-toggle.focus {
+        color: #fff;
+        background-color: #064045;
+        border-color: #031d20; }
+    .Button.\+purchase.disabled:focus, .Button.\+purchase.disabled.focus, .Button.\+purchase:disabled:focus, .Button.\+purchase:disabled.focus {
+      border-color: #1dd9eb; }
+    .Button.\+purchase.disabled:hover, .Button.\+purchase:disabled:hover {
+      border-color: #1dd9eb; }
   .Button.\+small {
     font-size: 0.875rem; }
 
@@ -7215,8 +7221,7 @@ a.text-danger:focus, a.text-danger:hover {
   font-style: italic; }
 
 .Testimonial__source {
-  color: black;
-  font-weight: bold; }
+  color: black; }
 
 .\+background-primary {
   background-color: #12BDCD; }

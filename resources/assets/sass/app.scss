@@ -5,8 +5,10 @@ $enable-rounded: false;
 $gray: #bfbfbf;
 $gray-less-dark: #808080;
 $gray-lightest: #efefef;
-$body-bg: $gray-lightest;
+$link-hover-decoration: none;
 $list-inline-padding: 1rem;
+
+$body-bg: $gray-lightest;
 
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/font-awesome/scss/font-awesome';
@@ -141,7 +143,13 @@ $list-inline-padding: 1rem;
     @extend .row;
 
     &__link {
+        @include default-transition();
+
         color: black;
+
+        &:hover {
+            color: $brand-primary;
+        }
     }
 
     &__list {
@@ -183,16 +191,18 @@ $list-inline-padding: 1rem;
 
     text-transform: uppercase;
 
-    &.\+ghost {
-        @include button-outline-variant(white);
-
-        &:hover {
-            color: $brand-primary;
-        }
+    &.\+block {
+        @extend .btn-block;
     }
 
     &.\+global {
         @include button-variant(white, $brand-primary, $brand-primary);
+    }
+
+    &.\+purchase {
+        @extend .btn-block;
+
+        @include button-outline-variant($brand-secondary);
     }
 
     &.\+small {
@@ -217,7 +227,6 @@ $list-inline-padding: 1rem;
 
     &__source {
         color: black;
-        font-weight: bold;
     }
 }
 
