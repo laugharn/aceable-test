@@ -1,2 +1,130 @@
+$brand-primary: #12BDCD;
+$enable-flex: true;
+$enable-rounded: false;
+$gray: #bfbfbf;
+$gray-lightest: #fafafa;
+$body-bg: $gray-lightest;
+$list-inline-padding: 1rem;
+
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/font-awesome/scss/font-awesome';
+
+@mixin default-transition() {
+    transition: 256ms all ease-in-out;
+}
+
+.InnerGraphic {
+    @extend .p-a-3;
+    @extend .text-xs-center;
+
+    color: white;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 100%;
+
+    h1 {
+        @extend .m-b-1;
+
+        font-size: $display4-size;
+        font-weight: 100;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        @extend .list-inline;
+
+        &-item {
+            @extend .list-inline-item;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+    }
+}
+
+.MainGraphic {
+    background-color: black;
+    background-image: url('../img/main-graphic-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: relative;
+    width: 100%;
+
+    &:before {
+        background-image: radial-gradient(rgba(black, .67), rgba(black, 1));
+        content: '';
+        display: block;
+        padding-top: percentage(1/4);
+    }
+}
+
+.Nav {
+    @extend .row;
+
+    &__link {
+        color: black;
+    }
+
+    &__list {
+        @extend .col-md-10;
+        @extend .list-inline;
+        @extend .text-xs-right;
+
+        font-size: $font-size-sm;
+        margin-bottom: auto;
+        margin-top: auto;
+        text-transform: uppercase;
+
+        &-item {
+            @extend .list-inline-item;
+        }
+    }
+
+    &__logo {
+        @extend .col-md-2;
+        @extend .col-xs-12;
+
+        img {
+            @extend .img-fluid;
+        }
+    }
+
+    &__wrapper {
+        @extend .container-fluid;
+
+        background-color: white;
+        padding: $spacer;
+    }
+}
+
+.Button {
+    @extend .btn;
+
+    @include default-transition();
+
+    text-transform: uppercase;
+
+    &.\+ghost {
+        @include button-outline-variant(white);
+
+        &:hover {
+            color: $brand-primary;
+        }
+    }
+
+    &.\+global {
+        @include button-variant(white, $brand-primary, $brand-primary);
+    }
+
+    &.\+small {
+        font-size: $font-size-sm;
+    }
+}
