@@ -1,0 +1,11 @@
+{
+  "name": "aceable-test",
+  "version": "1.0.0",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.4",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "laravel-elixir": "^6.0.0-9",
+    "laravel-elixir-webpack-official": "^1.0.2"
+  }
+}
