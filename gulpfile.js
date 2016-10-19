@@ -4,5 +4,5 @@ elixir.config.appPath = '';
 elixir.config.publicPath = 'assets';
 
 elixir(function (mix) {
-    mix.sass('app.scss');
+    mix.sass('app.scss').webpack('app.js');
 });

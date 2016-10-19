@@ -37,6 +37,12 @@ $body-bg: $gray-lightest;
         padding-top: ($spacer * 3.5) !important;
     }
 
+    &__filter {
+        @extend .col-md-8;
+        @extend .offset-md-2;
+        @extend .p-b-1;
+    }
+
     &__wrapper {
         @extend .col-xs-12;
         @extend .p-a-1;
@@ -244,4 +250,12 @@ $body-bg: $gray-lightest;
 
 .\+background-primary {
     background-color: $brand-primary;
+}
+
+.purchase-discount {
+    @extend .m-l-1;
+}
+.purchase-retail {
+    color: $gray-light;
+    text-decoration: line-through;
 }

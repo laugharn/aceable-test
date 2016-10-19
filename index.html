@@ -172,91 +172,25 @@
                         <h2>Get Started & Get Certified</h2>
                         <p>Find the program available for your state certification. Don't see your state listed? Contact us today for more information.</p>
                     </div>
+                    <div class="Card__filter">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="Find Your State" type="text" v-model="serviceFilter">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button" v-on:click="clearServiceFilter()" v-show="serviceFilter"><i class="fa fa-close"></i></button>
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="Cards">
-                    <div class="Card__wrapper --fourth">
+                    <div class="Card__wrapper --fourth" v-for="service in services | filterBy serviceFilter in 'state'">
                         <div class="Card">
-                            <h3>Alabama</h3>
-                            <p>Get certified to serve up Alabama Slammers in the birthplace of the drink.</p>
-                            <a class="Button +purchase" href="#">$25 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>California</h3>
-                            <p>You've got Grapefruit Sculpin on tap. Get state-certified to serve it.</p>
-                            <a class="Button +purchase" href="#">$50 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Florida</h3>
-                            <p>Off the Florida Keys, there's a place called Kokomo. Get certified in Florida.</p>
-                            <a class="Button +purchase" href="#">$35 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Georgia</h3>
-                            <p>Popping bottles in the club? Make sure you're state-certified in Georgia.</p>
-                            <a class="Button +purchase" href="#">$40 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Illinois</h3>
-                            <p>If somebody orders an Old Style, you'll be state-certified to serve them.</p>
-                            <a class="Button +purchase" href="#">$50 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Kentucky</h3>
-                            <p>Whatever bourbon you put in your julep, make sure you're certified to serve it.</p>
-                            <a class="Button +purchase" href="#">$35 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Louisiana</h3>
-                            <p>You make a perfect Sazerac, now you can be state-certified to serve it.</p>
-                            <a class="Button +purchase" href="#">$25 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>New Mexico</h3>
-                            <p>Prickly pear margaritas for everyone when you get yourself state-certified!</p>
-                            <a class="Button +purchase" href="#">$50 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>New York</h3>
-                            <p>Serve up a mean Manhattan in Manhattan when you get your state certification.</p>
-                            <a class="Button +purchase" href="#">$60 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Texas</h3>
-                            <p>Get certified, because everything is bigger in Texas, including the tallboys.</p>
-                            <a class="Button +purchase" href="#">$50 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Utah</h3>
-                            <p>Man, Utah drinking laws are crazy. All the same we can get you certified.</p>
-                            <a class="Button +purchase" href="#">$75 Get Started</a>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Wisconsin</h3>
-                            <p>A Wisconsin Old-Fashioned is not the same as an Old-Fashioned, but you know that.</p>
-                            <a class="Button +purchase" href="#">$25 Get Started</a>
+                            <h3>{{ service.state }}</h3>
+                            <p>{{ service.description }}</p>
+                            <a class="Button +purchase" href="#">
+                                <span v-bind:class="{'purchase-retail': service.price.discount}">{{ service.price.retail }}</span>
+                                <span class="purchase-discount" v-if="service.price.discount">{{ service.price.discount }}</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -284,5 +218,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="/assets/js/app.js"></script>
     </body>
 </html>

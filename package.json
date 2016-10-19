@@ -6,6 +6,8 @@
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "laravel-elixir": "^6.0.0-9",
-    "laravel-elixir-webpack-official": "^1.0.2"
+    "laravel-elixir-webpack-official": "^1.0.2",
+    "underscore": "^1.8.3",
+    "vue": "^1.0.26"
   }
 }
