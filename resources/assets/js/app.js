@@ -7,6 +7,7 @@ import content from './content';
 import services from './services';
 
 import queryString from 'query-string';
+import scrollStyle from './libraries/scroll-style';
 import smoothScroll from 'smooth-scroll';
 import Vue from 'vue';
 
@@ -63,5 +64,6 @@ let app = new Vue({
     ready() {
         this.setCampaign();
         smoothScroll.init();
+        scrollStyle.init();
     }
 });

@@ -7125,8 +7125,8 @@ a.text-danger:focus, a.text-danger:hover {
   padding: 2rem 0; }
 
 .Nav__link {
-  -webkit-transition: 256ms all ease-in-out;
-  transition: 256ms all ease-in-out;
+  -webkit-transition: 256ms all;
+  transition: 256ms all;
   color: black; }
   .Nav__link:hover {
     color: #12BDCD; }
@@ -7138,12 +7138,21 @@ a.text-danger:focus, a.text-danger:hover {
   text-transform: uppercase; }
 
 .Nav__wrapper {
+  -webkit-transition: 256ms all;
+  transition: 256ms all;
   background-color: white;
-  padding: 1rem; }
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  z-index: 1030; }
+  .Nav__wrapper.\--scrolled-below {
+    box-shadow: 0 0.25rem 0.5rem #373a3c;
+    position: fixed;
+    top: 0; }
 
 .Button {
-  -webkit-transition: 256ms all ease-in-out;
-  transition: 256ms all ease-in-out;
+  -webkit-transition: 256ms all;
+  transition: 256ms all;
   text-transform: uppercase; }
   .Button.\+global {
     color: white;

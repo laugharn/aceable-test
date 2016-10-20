@@ -14,7 +14,7 @@ $body-bg: $gray-lightest;
 @import 'node_modules/font-awesome/scss/font-awesome';
 
 @mixin default-transition() {
-    transition: 256ms all ease-in-out;
+    transition: 256ms all;
 }
 
 .Card {
@@ -185,8 +185,20 @@ $body-bg: $gray-lightest;
     &__wrapper {
         @extend .container-fluid;
 
+        @include default-transition();
+
         background-color: white;
         padding: $spacer;
+        position: relative;
+        width: 100%;
+        z-index: $zindex-navbar-sticky;
+
+        &.\--scrolled-below {
+            box-shadow: 0 ($spacer / 4) ($spacer / 2) $gray-dark;
+            //padding: ($spacer / 2) $spacer;
+            position: fixed;
+                top: 0;
+        }
     }
 }
 
