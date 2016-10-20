@@ -42,6 +42,10 @@
     &.\+small {
         font-size: $font-size-sm;
     }
+
+    &.\+warning {
+        @include button-variant(white, $brand-warning, $brand-warning);
+    }
 }
 
 .Card {

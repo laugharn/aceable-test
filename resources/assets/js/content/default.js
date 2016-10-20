@@ -61,7 +61,7 @@ export default {
             {
                 image: '/assets/img/Testimonial-1.jpg',
                 quote: 'Aceable is awesome! They made everything super easy and fast. App store reviews don\'t lie!',
-                source: 'Tom C.'
+                source: 'Brian F.'
             },
             {
                 image: '/assets/img/Testimonial-2.jpg',

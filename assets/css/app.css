@@ -7180,6 +7180,37 @@ a.text-danger:focus, a.text-danger:hover {
       border-color: #0d8995; }
   .Button.\+small {
     font-size: 0.875rem; }
+  .Button.\+warning {
+    color: white;
+    background-color: #f0ad4e;
+    border-color: #f0ad4e; }
+    .Button.\+warning:hover {
+      color: white;
+      background-color: #ec971f;
+      border-color: #eb9316; }
+    .Button.\+warning:focus, .Button.\+warning.focus {
+      color: white;
+      background-color: #ec971f;
+      border-color: #eb9316; }
+    .Button.\+warning:active, .Button.\+warning.active,
+    .open > .Button.\+warning.dropdown-toggle {
+      color: white;
+      background-color: #ec971f;
+      border-color: #eb9316;
+      background-image: none; }
+      .Button.\+warning:active:hover, .Button.\+warning:active:focus, .Button.\+warning:active.focus, .Button.\+warning.active:hover, .Button.\+warning.active:focus, .Button.\+warning.active.focus,
+      .open > .Button.\+warning.dropdown-toggle:hover,
+      .open > .Button.\+warning.dropdown-toggle:focus,
+      .open > .Button.\+warning.dropdown-toggle.focus {
+        color: white;
+        background-color: #d58512;
+        border-color: #b06d0f; }
+    .Button.\+warning.disabled:focus, .Button.\+warning.disabled.focus, .Button.\+warning:disabled:focus, .Button.\+warning:disabled.focus {
+      background-color: #f0ad4e;
+      border-color: #f0ad4e; }
+    .Button.\+warning.disabled:hover, .Button.\+warning:disabled:hover {
+      background-color: #f0ad4e;
+      border-color: #f0ad4e; }
 
 .Card {
   background-color: white;

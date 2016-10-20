@@ -1,12 +1,28 @@
 export default {
-    abc: {
-        about: {
+    ab_test_1: {
+        mainGraphic: {
             content: {
-                h2: 'I Cannot Believe This Still Works'
+                h1: 'Become State-Certified Today'
             }
         }
     },
-    fnl: {
+    ab_test_2: {
+        mainGraphic: {
+            video: {
+                id: '_5jnn1AIt7Q'
+            }
+        }
+    },
+    ab_test_3: {
+        mainGraphic: {
+            content: {
+                button: {
+                    classes: '+block +warning'
+                }
+            }
+        }
+    },
+    ab_test_fnl: {
         features: {
             cardClasses: '--third',
             cards: [
