@@ -4,7 +4,7 @@
  * Imports Underscore and a custom mixin for doing nested gets with dot notation.
  */
 import _ from 'underscore';
-import mixins from './mixins';
+import mixins from './libraries/underscore-mixins';
 _.mixin(mixins);
 
 /**
@@ -63,10 +63,10 @@ let app = new Vue({
 
     // The application's data store. All elements on the front end react to changes here.
     data: {
-        campaign: null,
-        content: content,
+        campaign: {},
+        content: {},
         serviceFilter: '',
-        services: services
+        services: {}
     },
 
     // The element to bind the application to.
@@ -98,12 +98,23 @@ let app = new Vue({
             let parsedQueryString = queryString.parse(location.search);
             let campaign = _.deep(campaigns, parsedQueryString.utm_campaign);
             this.$set('campaign', campaign);
+        },
+        setContent() {
+            this.$set('content', content);
+        },
+        setServices() {
+            this.$set('services', services);
         }
     },
 
     // Functions to run when the application is ready.
     ready() {
+
+        // These functions set the objects in the application's data store.
+        this.setContent();
         this.setCampaign();
+        this.setServices();
+
         smoothScroll.init();
         scrollStyle.init();
     }
