@@ -17,7 +17,7 @@ Once you've navigated to http://localhost:1983, you can browse around. Try addin
 
 ## Development Notes
 
-The final delivered product is little more than a static HTML file with a stylesheet and a JavaScript call. I used a Gulp-based task runner to compile the JavaScript and SASS assets, Bootstrap and Font Awesome for base styling, and VueJS to create the JavaScript application that powers the page. Ultimately, what I was going for with the page can be broken down to two concepts:
+The final delivered product is little more than a static HTML file with a stylesheet and a JavaScript call. I tried to make a simple landing page while kind of maintaining the house style of aceable.com. I used a Gulp-based task runner to compile the JavaScript and SASS assets, Bootstrap and Font Awesome for base styling, and VueJS to create the JavaScript application that powers the page. Ultimately, what I was going for with the page can be broken down to two concepts:
 
 ### Programmatic
 
