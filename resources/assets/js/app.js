@@ -56,7 +56,7 @@ let app = new Vue({
         youtubeEmbedSrc: {
             get() {
                 let youtubeId = this.getContent('mainGraphic.video.id');
-                return 'https://www.youtube.com/embed/' + youtubeId;
+                return 'https://www.youtube.com/embed/' + youtubeId + '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0';
             }
         }
     },
@@ -96,8 +96,9 @@ let app = new Vue({
         },
         setCampaign() {
             let parsedQueryString = queryString.parse(location.search);
-            let campaign = _.deep(campaigns, parsedQueryString.utm_campaign);
-            this.$set('campaign', campaign);
+            if(!_.isEmpty(parsedQueryString)) {
+                this.$set('campaign', _.deep(campaigns, parsedQueryString.utm_campaign));
+            }
         },
         setContent() {
             this.$set('content', content);
