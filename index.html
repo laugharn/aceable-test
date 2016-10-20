@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <link href="/assets/css/app.css" rel="stylesheet">
+        <link href="./assets/css/app.css" rel="stylesheet">
     </head>
     <body>
         <div class="Nav__wrapper">
@@ -43,12 +43,12 @@
                 <div class="MainGraphic">
                     <div class="MainGraphic__video">
                         <div class="Video__wrapper --16-by-9">
-                            <iframe class="Video" width="100" height="100" src="https://www.youtube.com/embed/B5YNiCfWC3A" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="Video" width="100" height="100" v-bind:src="youtubeEmbedSrc" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="MainGraphic__content">
-                        <h1>Those Drinks Won't Pour Themselves.</h1>
-                        <p class="lead">The most effortless way to earn your alcohol server certification - <strong>right from home</strong></p>
+                        <h1>{{{ getContent('mainGraphic.content.h1') }}}</h1>
+                        <p class="lead">{{{ getContent('mainGraphic.content.p') }}}</p>
                         <ul>
                             <li>State-Certified Courses, Simplified</li>
                             <li>Mobile Learning Made Effortless</li>
@@ -60,38 +60,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="Layer">
-            <div class="container">
-                <div class="ContentLayer">
-                    <div class="ContentLayer__text">
-                        <h2>Online Alcohol Training & Certification</h2>
-                        <p>Get your bartending certification with our fun-size lesson plans and proven teaching methods. With our mobile-first platform, the world is your classroom.</p>
-                    </div>
-                </div>
-
-                <div class="Cards">
-                    <div class="Card__wrapper --third">
-                        <div class="Card">
-                            <h3>Your Course, Your Way</h3>
-                            <p>With the Aceable online alcohol server training program, you have complete control over your course, with state-approved material that sets you down the path toward responsible beverage service.</p>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --third">
-                        <div class="Card">
-                            <h3>An Option for Everyone</h3>
-                            <p>Whether you’re an employee or a manager, a business owner or a bartender, we have the course you’re looking for. Each of our online alcohol seller certification courses caters to your specific needs.</p>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --third">
-                        <div class="Card">
-                            <h3>Benefit Your Business</h3>
-                            <p>Aceable makes it simple to train and certify all of your employees, so you can run a successful and responsible business. From small businesses to national chains, Aceable has everything you need.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
         <div class="Layer">
             <div class="container">
@@ -142,21 +110,21 @@
                 <div class="Cards">
                     <div class="Card__wrapper --third">
                         <div class="Card --testimonial">
-                            <img class="Testimonial__image" src="/assets/img/Testimonial-1.jpg">
-                            <p class="Testimonial__quote">""Aceable is awesome! They made everything super easy and fast. App store reviews don't lie!"</p>
+                            <img class="Testimonial__image" src="./assets/img/Testimonial-1.jpg">
+                            <p class="Testimonial__quote">"Aceable is awesome! They made everything super easy and fast. App store reviews don't lie!"</p>
                             <p class="Testimonial__source">- Tom C.</p>
                         </div>
                     </div>
                     <div class="Card__wrapper --third">
                         <div class="Card --testimonial">
-                            <img class="Testimonial__image" src="/assets/img/Testimonial-2.jpg">
+                            <img class="Testimonial__image" src="./assets/img/Testimonial-2.jpg">
                             <p class="Testimonial__quote">"I did all bartending certification (minus the bartending part) on my couch with my iPad. Sweeeeeet!"</p>
                             <p class="Testimonial__source">- Dee R.</p>
                         </div>
                     </div>
                     <div class="Card__wrapper --third">
                         <div class="Card --testimonial">
-                            <img class="Testimonial__image" src="/assets/img/Testimonial-3.jpg">
+                            <img class="Testimonial__image" src="./assets/img/Testimonial-3.jpg">
                             <p class="Testimonial__quote">"Aceable is the best. The friendly Customer Service will walk you through anything you don't understand. It is awesome!"</p>
                             <p class="Testimonial__source">- Luke C.</p>
                         </div>
@@ -187,7 +155,7 @@
                         <div class="Card">
                             <h3>{{ service.state }}</h3>
                             <p>{{ service.description }}</p>
-                            <a class="Button +purchase" href="#">
+                            <a class="Button +purchase" href="#" v-on:click.prevent="alertForPageThatDoesNotExist()">
                                 <span v-bind:class="{'purchase-retail': service.price.discount}">{{ service.price.retail }}</span>
                                 <span class="purchase-discount" v-if="service.price.discount">{{ service.price.discount }}</span>
                             </a>
@@ -201,7 +169,9 @@
             <div class="container">
                 <div class="ContentLayer">
                     <div class="ContentLayer__text">
-                        <h2>Aceable is Reinventing Required Learning</h2>
+                        <h2>
+                            {{{ getContent('about.content.h2') }}}
+                        </h2>
                         <p>Welcome to Aceable. We’re a team of educators, techies, creatives and all-around outstanding folks who care about people just like you. At Aceable, we’ve got big ideas and even bigger hearts. We work hard every day to make online alcohol sales courses easy, enjoyable and accessible for everyone. Because that’s the way it should be.</p>
                         <p>Here, we’re passionate about empowering people to get certified. Just look at the thousands of Aceable customers who share selfies with their new licenses on social media, and you’ll see why.</p>
                     </div>
@@ -219,6 +189,6 @@
             </div>
         </div>
 
-        <script src="/assets/js/app.js"></script>
+        <script src="./assets/js/app.js"></script>
     </body>
 </html>
