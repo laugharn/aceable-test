@@ -8,6 +8,7 @@
     "laravel-elixir": "^6.0.0-9",
     "laravel-elixir-webpack-official": "^1.0.2",
     "query-string": "^4.2.3",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
     "underscore": "^1.8.3",
     "vue": "^1.0.26"
   }
