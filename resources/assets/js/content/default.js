@@ -9,7 +9,7 @@ export default {
         cards: [
             {
                 description: 'We\'ve re-imagined alcohol sales training to fit your lifestyle. Take state-accredited courses on iPhone, Android or web. Aceable is self-paced and never expires.',
-                title: 'Cetification, Simplified'
+                title: 'Certification, Simplified'
             },
             {
                 description: 'Aceable gives you access to powerful tools, like unlimited free practice tests. Save your progress to any device and take alcohol sales training on the go.',
@@ -31,11 +31,19 @@ export default {
     },
     mainGraphic: {
         content: {
+            button: {
+                text: '<i class="fa fa-thumbs-up"></i> Get Started'
+            },
             h1: 'Those drinks won\'t pour themselves.',
             p: 'The most effortless way to earn your alcohol server certification - <strong>right from home</strong>'
         },
         video: {
             id: 'B5YNiCfWC3A'
+        }
+    },
+    nav: {
+        button: {
+            text: '<i class="fa fa-thumbs-up"></i> Get Started'
         }
     },
     services: {

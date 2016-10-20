@@ -38,7 +38,7 @@
                     </li>
                     <li class="Nav__list-item">
                         <a data-scroll class="Button +global +small" href="#LayerServices">
-                            <i class="fa fa-key"></i> Get Started
+                            {{{ getContent('nav.button.text') }}}
                         </a>
                     </li>
                 </ul>
@@ -59,7 +59,9 @@
                         <ul>
                             <li v-for="featureCard in featureCards">{{ featureCard.title }}</li>
                         </ul>
-                        <a class="Button +block +global" href="#"><i class="fa fa-thumbs-up"></i> Get Started</a>
+                        <a data-scroll class="Button +block +global" href="href="#LayerServices"">
+                            {{{ getContent('mainGraphic.content.button.text') }}}
+                        </a>
                     </div>
                 </div>
             </div>
