@@ -89,7 +89,7 @@ export default {
             state: 'Utah',
         },
         {
-            description: 'A Wisconsin Old-Fashioned is not the same as an Old-Fashioned, but you know that.',
+            description: 'A Wisconsin Old-Fashioned is not the same as an Old-Fashioned, just FYI.',
             price: {
                 discount: '$25',
                 retail: '$30'

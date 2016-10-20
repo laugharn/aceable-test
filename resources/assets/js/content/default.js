@@ -9,7 +9,7 @@ export default {
         cardClasses: '--fourth',
         cards: [
             {
-                description: 'We\'ve re-imagined alcohol sales training to fit your lifestyle. Take state-accredited courses on iPhone, Android or web. Aceable is self-paced and never expires.',
+                description: 'We\'ve re-imagined alcohol sales training to fit your lifestyle. Take certification courses on mobile or web. Aceable is self-paced and never expires.',
                 title: 'Certification, Simplified'
             },
             {
@@ -70,7 +70,7 @@ export default {
             },
             {
                 image: '/assets/img/Testimonial-3.jpg',
-                quote: 'Aceable is the best. The friendly Customer Service will walk you through anything you don\'t understand. It is awesome!',
+                quote: 'Aceable is the best. Customer Service will walk you through anything you don\'t understand. It is awesome!',
                 source: 'Luke C.'
             },
         ],
