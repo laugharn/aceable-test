@@ -30,3 +30,7 @@ For example, if the initial content has a `features.content.h1` value of "Online
 I tried to make as much of the design into components as I could. Generally speaking, Bootstrap can be very opinionated in your front end, but using SASS and BEM principles allows you to *almost* completely remove Bootstrap's classes from the front end. So, if a new developer wanted to use Foundation instead of Bootstrap, there would be very little recoding necessary in the HTML, he would just need to create a new stylesheet.
 
 This, coupled with using the SASS `@extend` method instead of mixins, allows your stylesheet to have an almost annotated feel that's very easy to understand.
+
+## Where This Could Go
+
+This is just a static single page, which has a lot of advantages for speed and such, but would sacrifice a lot of functionality. If this were a real product, I would imagine it as part of a larger application. That would allow us to spin up multiple different interchangable templates, have an API and interface for creating the campaigns, and integrate seamlessly with the main marketing site.
