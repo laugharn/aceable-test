@@ -11,6 +11,16 @@ import Vue from 'vue';
 
 let app = new Vue({
     computed: {
+        featureCards: {
+            get() {
+                return this.getContent('features.cards');
+            }
+        },
+        testimonialCards: {
+            get() {
+                return this.getContent('testimonials.cards');
+            }
+        },
         youtubeEmbedSrc: {
             get() {
                 let youtubeId = this.getContent('mainGraphic.video.id');

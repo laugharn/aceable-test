@@ -6,6 +6,8 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
         <link href="./assets/css/app.css" rel="stylesheet">
+
+        <title>Online Alcohol Training & Certification | Aceable</title>
     </head>
     <body>
         <div class="Nav__wrapper">
@@ -50,10 +52,7 @@
                         <h1>{{{ getContent('mainGraphic.content.h1') }}}</h1>
                         <p class="lead">{{{ getContent('mainGraphic.content.p') }}}</p>
                         <ul>
-                            <li>State-Certified Courses, Simplified</li>
-                            <li>Mobile Learning Made Effortless</li>
-                            <li>Incredibly Affordable, Impossibly Fast</li>
-                            <li>Friendly People, Awesome Perks</li>
+                            <li v-for="featureCard in featureCards">{{ featureCard.title }}</li>
                         </ul>
                         <a class="Button +block +global" href="#"><i class="fa fa-thumbs-up"></i> Get Started</a>
                     </div>
@@ -65,34 +64,16 @@
             <div class="container">
                 <div class="ContentLayer">
                     <div class="ContentLayer__text">
-                        <h2>Online Alcohol Training & Certification</h2>
-                        <p>Get your bartending certification with our fun-size lesson plans and proven teaching methods. With our mobile-first platform, the world is your classroom.</p>
+                        <h2>{{{ getContent('features.content.h2') }}}</h2>
+                        <p>{{{ getContent('features.content.p') }}}</p>
                     </div>
                 </div>
 
                 <div class="Cards">
-                    <div class="Card__wrapper --fourth">
+                    <div class="Card__wrapper --fourth" v-for="featureCard in featureCards">
                         <div class="Card">
-                            <h3>Certification Simplified</h3>
-                            <p>We've re-imagined alcohol sales training to fit your lifestyle. Take state-accredited courses on iPhone, Android or web. Aceable is self-paced and never expires.</p>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Mobile Learning Made Effortless</h3>
-                            <p>Aceable gives you access to powerful tools, like unlimited free practice tests. Save your progress to any device and take alcohol sales training on the go.</p>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Incredibly Affordable</h3>
-                            <p>Our all-in-one courses save you money and time while preparing you to be a bartender. Sign up in seconds and selling drinks in days, not weeks.</p>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --fourth">
-                        <div class="Card">
-                            <h3>Friendly People, Awesome Perks</h3>
-                            <p>Talk to our team via chat, phone or social media 7 days a week. We help you from sign-up to finish and offer free completion certificate shipping.</p>
+                            <h3>{{ featureCard.title }}</h3>
+                            <p>{{{ featureCard.description }}}</p>
                         </div>
                     </div>
                 </div>
@@ -103,30 +84,16 @@
             <div class="container">
                 <div class="ContentLayer">
                     <div class="ContentLayer__text">
-                        <h2>Don't Just Take Our Word For It</h2>
-                        <p>With our top-rated mobile app and 5-star reviews, it’s easy to see why bartenders around the nation love Aceable.</p>
+                        <h2>{{ getContent('testimonials.content.h2') }}</h2>
+                        <p>{{{ getContent('testimonials.content.p') }}}</p>
                     </div>
                 </div>
                 <div class="Cards">
-                    <div class="Card__wrapper --third">
+                    <div class="Card__wrapper --third" v-for="testimonialCard in testimonialCards">
                         <div class="Card --testimonial">
-                            <img class="Testimonial__image" src="./assets/img/Testimonial-1.jpg">
-                            <p class="Testimonial__quote">"Aceable is awesome! They made everything super easy and fast. App store reviews don't lie!"</p>
-                            <p class="Testimonial__source">- Tom C.</p>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --third">
-                        <div class="Card --testimonial">
-                            <img class="Testimonial__image" src="./assets/img/Testimonial-2.jpg">
-                            <p class="Testimonial__quote">"I did all bartending certification (minus the bartending part) on my couch with my iPad. Sweeeeeet!"</p>
-                            <p class="Testimonial__source">- Dee R.</p>
-                        </div>
-                    </div>
-                    <div class="Card__wrapper --third">
-                        <div class="Card --testimonial">
-                            <img class="Testimonial__image" src="./assets/img/Testimonial-3.jpg">
-                            <p class="Testimonial__quote">"Aceable is the best. The friendly Customer Service will walk you through anything you don't understand. It is awesome!"</p>
-                            <p class="Testimonial__source">- Luke C.</p>
+                            <img class="Testimonial__image" v-bind:src="testimonialCard.image">
+                            <p class="Testimonial__quote">"{{ testimonialCard.quote }}"</p>
+                            <p class="Testimonial__source">- {{ testimonialCard.source }}</p>
                         </div>
                     </div>
                 </div>
@@ -137,8 +104,8 @@
             <div class="container">
                 <div class="ContentLayer">
                     <div class="ContentLayer__text">
-                        <h2>Get Started & Get Certified</h2>
-                        <p>Find the program available for your state certification. Don't see your state listed? Contact us today for more information.</p>
+                        <h2>{{ getContent('services.content.h2') }}</h2>
+                        <p>{{{ getContent('services.content.p') }}}</p>
                     </div>
                     <div class="Card__filter">
                         <div class="input-group">
@@ -172,8 +139,9 @@
                         <h2>
                             {{{ getContent('about.content.h2') }}}
                         </h2>
-                        <p>Welcome to Aceable. We’re a team of educators, techies, creatives and all-around outstanding folks who care about people just like you. At Aceable, we’ve got big ideas and even bigger hearts. We work hard every day to make online alcohol sales courses easy, enjoyable and accessible for everyone. Because that’s the way it should be.</p>
-                        <p>Here, we’re passionate about empowering people to get certified. Just look at the thousands of Aceable customers who share selfies with their new licenses on social media, and you’ll see why.</p>
+                        <p>
+                            {{{ getContent('about.content.p') }}}
+                        </p>
                     </div>
                 </div>
             </div>
