@@ -6,6 +6,7 @@ export default {
         }
     },
     features: {
+        cardClasses: '--fourth',
         cards: [
             {
                 description: 'We\'ve re-imagined alcohol sales training to fit your lifestyle. Take state-accredited courses on iPhone, Android or web. Aceable is self-paced and never expires.',
@@ -32,6 +33,7 @@ export default {
     mainGraphic: {
         content: {
             button: {
+                classes: '+block +primary',
                 text: '<i class="fa fa-thumbs-up"></i> Get Started'
             },
             h1: 'Those drinks won\'t pour themselves.',
@@ -43,6 +45,7 @@ export default {
     },
     nav: {
         button: {
+            classes: '+primary +small',
             text: '<i class="fa fa-thumbs-up"></i> Get Started'
         }
     },
@@ -53,6 +56,7 @@ export default {
         }
     },
     testimonials: {
+        cardClasses: '--third',
         cards: [
             {
                 image: '/assets/img/Testimonial-1.jpg',

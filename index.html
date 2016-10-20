@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li class="Nav__list-item">
-                        <a data-scroll class="Button +global +small" href="#LayerServices">
+                        <a data-scroll class="Button" href="#LayerServices" v-bind:class="getClasses('nav.button.classes')">
                             {{{ getContent('nav.button.text') }}}
                         </a>
                     </li>
@@ -59,7 +59,7 @@
                         <ul>
                             <li v-for="featureCard in featureCards">{{ featureCard.title }}</li>
                         </ul>
-                        <a data-scroll class="Button +block +global" href="href="#LayerServices"">
+                        <a data-scroll class="Button" href="#LayerServices" v-bind:class="getClasses('mainGraphic.content.button.classes')">
                             {{{ getContent('mainGraphic.content.button.text') }}}
                         </a>
                     </div>
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="Cards">
-                    <div class="Card__wrapper --fourth" v-for="featureCard in featureCards">
+                    <div class="Card__wrapper" v-bind:class="getClasses('features.cardClasses')" v-for="featureCard in featureCards">
                         <div class="Card">
                             <h3>{{ featureCard.title }}</h3>
                             <p>{{{ featureCard.description }}}</p>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <div class="Cards">
-                    <div class="Card__wrapper --third" v-for="testimonialCard in testimonialCards">
+                    <div class="Card__wrapper" v-for="testimonialCard in testimonialCards" v-bind:class="getClasses('testimonials.cardClasses')">
                         <div class="Card --testimonial">
                             <img class="Testimonial__image" v-bind:src="testimonialCard.image">
                             <p class="Testimonial__quote">"{{ testimonialCard.quote }}"</p>
@@ -125,7 +125,7 @@
                 </div>
 
                 <div class="Cards">
-                    <div class="Card__wrapper --fourth" v-for="service in services | filterBy serviceFilter in 'state'">
+                    <div class="Card__wrapper --fourth" v-for="service in services.cards | filterBy serviceFilter in 'state'">
                         <div class="Card">
                             <h3>{{ service.state }}</h3>
                             <p>{{ service.description }}</p>
@@ -154,7 +154,7 @@
             </div>
         </div>
 
-        <div class="Layer --footer">
+        <div class="Layer --footer" v-bind:class="getClasses('foo')">
             <div class="container">
                 <div class="ContentLayer">
                     <div class="ContentLayer__text">

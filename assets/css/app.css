@@ -7155,35 +7155,35 @@ a.text-danger:focus, a.text-danger:hover {
   -webkit-transition: 256ms all;
   transition: 256ms all;
   text-transform: uppercase; }
-  .Button.\+global {
+  .Button.\+primary {
     color: white;
     background-color: #12BDCD;
     border-color: #12BDCD; }
-    .Button.\+global:hover {
+    .Button.\+primary:hover {
       color: white;
       background-color: #0e929e;
       border-color: #0d8995; }
-    .Button.\+global:focus, .Button.\+global.focus {
+    .Button.\+primary:focus, .Button.\+primary.focus {
       color: white;
       background-color: #0e929e;
       border-color: #0d8995; }
-    .Button.\+global:active, .Button.\+global.active,
-    .open > .Button.\+global.dropdown-toggle {
+    .Button.\+primary:active, .Button.\+primary.active,
+    .open > .Button.\+primary.dropdown-toggle {
       color: white;
       background-color: #0e929e;
       border-color: #0d8995;
       background-image: none; }
-      .Button.\+global:active:hover, .Button.\+global:active:focus, .Button.\+global:active.focus, .Button.\+global.active:hover, .Button.\+global.active:focus, .Button.\+global.active.focus,
-      .open > .Button.\+global.dropdown-toggle:hover,
-      .open > .Button.\+global.dropdown-toggle:focus,
-      .open > .Button.\+global.dropdown-toggle.focus {
+      .Button.\+primary:active:hover, .Button.\+primary:active:focus, .Button.\+primary:active.focus, .Button.\+primary.active:hover, .Button.\+primary.active:focus, .Button.\+primary.active.focus,
+      .open > .Button.\+primary.dropdown-toggle:hover,
+      .open > .Button.\+primary.dropdown-toggle:focus,
+      .open > .Button.\+primary.dropdown-toggle.focus {
         color: white;
         background-color: #0b747d;
         border-color: #085158; }
-    .Button.\+global.disabled:focus, .Button.\+global.disabled.focus, .Button.\+global:disabled:focus, .Button.\+global:disabled.focus {
+    .Button.\+primary.disabled:focus, .Button.\+primary.disabled.focus, .Button.\+primary:disabled:focus, .Button.\+primary:disabled.focus {
       background-color: #12BDCD;
       border-color: #12BDCD; }
-    .Button.\+global.disabled:hover, .Button.\+global:disabled:hover {
+    .Button.\+primary.disabled:hover, .Button.\+primary:disabled:hover {
       background-color: #12BDCD;
       border-color: #12BDCD; }
   .Button.\+purchase {
@@ -7215,6 +7215,37 @@ a.text-danger:focus, a.text-danger:hover {
       border-color: #1dd9eb; }
     .Button.\+purchase.disabled:hover, .Button.\+purchase:disabled:hover {
       border-color: #1dd9eb; }
+  .Button.\+secondary {
+    color: white;
+    background-color: #0d8995;
+    border-color: #0d8995; }
+    .Button.\+secondary:hover {
+      color: white;
+      background-color: #095e66;
+      border-color: #08555c; }
+    .Button.\+secondary:focus, .Button.\+secondary.focus {
+      color: white;
+      background-color: #095e66;
+      border-color: #08555c; }
+    .Button.\+secondary:active, .Button.\+secondary.active,
+    .open > .Button.\+secondary.dropdown-toggle {
+      color: white;
+      background-color: #095e66;
+      border-color: #08555c;
+      background-image: none; }
+      .Button.\+secondary:active:hover, .Button.\+secondary:active:focus, .Button.\+secondary:active.focus, .Button.\+secondary.active:hover, .Button.\+secondary.active:focus, .Button.\+secondary.active.focus,
+      .open > .Button.\+secondary.dropdown-toggle:hover,
+      .open > .Button.\+secondary.dropdown-toggle:focus,
+      .open > .Button.\+secondary.dropdown-toggle.focus {
+        color: white;
+        background-color: #064045;
+        border-color: #031d20; }
+    .Button.\+secondary.disabled:focus, .Button.\+secondary.disabled.focus, .Button.\+secondary:disabled:focus, .Button.\+secondary:disabled.focus {
+      background-color: #0d8995;
+      border-color: #0d8995; }
+    .Button.\+secondary.disabled:hover, .Button.\+secondary:disabled:hover {
+      background-color: #0d8995;
+      border-color: #0d8995; }
   .Button.\+small {
     font-size: 0.875rem; }
 

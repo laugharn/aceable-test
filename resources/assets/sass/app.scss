@@ -214,7 +214,7 @@ $body-bg: $gray-lightest;
         @extend .btn-block;
     }
 
-    &.\+global {
+    &.\+primary {
         @include button-variant(white, $brand-primary, $brand-primary);
     }
 
@@ -222,6 +222,10 @@ $body-bg: $gray-lightest;
         @extend .btn-block;
 
         @include button-outline-variant($brand-secondary);
+    }
+
+    &.\+secondary {
+        @include button-variant(white, $brand-secondary, $brand-secondary);
     }
 
     &.\+small {

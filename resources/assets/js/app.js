@@ -91,6 +91,9 @@ let app = new Vue({
 
             return campaignContent;
         },
+        getClasses(key) {
+            return this.getContent(key);
+        },
         setCampaign() {
             let parsedQueryString = queryString.parse(location.search);
             let campaign = _.deep(campaigns, parsedQueryString.utm_campaign);
