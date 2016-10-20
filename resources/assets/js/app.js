@@ -4,7 +4,7 @@
  * Imports Underscore and a custom mixin for doing nested gets with dot notation.
  */
 import _ from 'underscore';
-import mixins from './libraries/underscore-mixins';
+import mixins from './imports/underscore-mixins';
 _.mixin(mixins);
 
 /**
@@ -15,7 +15,7 @@ _.mixin(mixins);
 import queryString from 'query-string';
 
 // This library is Bootstrap's suggested replacement for the deprecated Affix library if you want an "on stick" event. It's not available through NPM so I had to tweak it, but in a real life application this would be imported through NPM.
-import scrollStyle from './libraries/scroll-style';
+import scrollStyle from './imports/scroll-style';
 import smoothScroll from 'smooth-scroll';
 
 /**

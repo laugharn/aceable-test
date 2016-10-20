@@ -1,20 +1,47 @@
-$brand-primary: #12BDCD;
-$brand-secondary: darken($brand-primary, 12%);
-$enable-flex: true;
-$enable-rounded: false;
-$gray: #bfbfbf;
-$gray-less-dark: #808080;
-$gray-lightest: #efefef;
-$link-hover-decoration: none;
-$list-inline-padding: 1rem;
+/**
+ * Local Imports
+ *
+ * Imports locally defined variables and mixins.
+ */
+@import './imports/mixins';
+@import './imports/variables';
 
-$body-bg: $gray-lightest;
-
+/**
+ * Library Imports
+ *
+ * Imports Bootstrap and Font Awesome.
+ */
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/font-awesome/scss/font-awesome';
 
-@mixin default-transition() {
-    transition: 256ms all;
+.Button {
+    @extend .btn;
+
+    @include default-transition();
+
+    text-transform: uppercase;
+
+    &.\+block {
+        @extend .btn-block;
+    }
+
+    &.\+primary {
+        @include button-variant(white, $brand-primary, $brand-primary);
+    }
+
+    &.\+purchase {
+        @extend .btn-block;
+
+        @include button-outline-variant($brand-secondary);
+    }
+
+    &.\+secondary {
+        @include button-variant(white, $brand-secondary, $brand-secondary);
+    }
+
+    &.\+small {
+        font-size: $font-size-sm;
+    }
 }
 
 .Card {
@@ -203,36 +230,6 @@ $body-bg: $gray-lightest;
     }
 }
 
-.Button {
-    @extend .btn;
-
-    @include default-transition();
-
-    text-transform: uppercase;
-
-    &.\+block {
-        @extend .btn-block;
-    }
-
-    &.\+primary {
-        @include button-variant(white, $brand-primary, $brand-primary);
-    }
-
-    &.\+purchase {
-        @extend .btn-block;
-
-        @include button-outline-variant($brand-secondary);
-    }
-
-    &.\+secondary {
-        @include button-variant(white, $brand-secondary, $brand-secondary);
-    }
-
-    &.\+small {
-        font-size: $font-size-sm;
-    }
-}
-
 .Testimonial {
     &__image {
         border-radius: 50%;
@@ -263,10 +260,6 @@ $body-bg: $gray-lightest;
             @extend .embed-responsive-16by9;
         }
     }
-}
-
-.\+background-primary {
-    background-color: $brand-primary;
 }
 
 .purchase-discount {

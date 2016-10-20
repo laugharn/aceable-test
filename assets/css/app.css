@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/**
+ * Local Imports
+ *
+ * Imports locally defined variables and mixins.
+ */
+/**
+ * Library Imports
+ *
+ * Imports Bootstrap and Font Awesome.
+ */
 /*!
  * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
@@ -7073,84 +7083,6 @@ a.text-danger:focus, a.text-danger:hover {
   overflow: visible;
   clip: auto; }
 
-.Card {
-  background-color: white;
-  color: #808080;
-  position: relative; }
-  .Card h3 {
-    color: black;
-    font-size: 1.5rem;
-    font-weight: 200;
-    letter-spacing: 1px;
-    text-transform: uppercase; }
-  .Card.\--testimonial {
-    padding-top: 3.5rem !important; }
-
-.ContentLayer__text h2 {
-  color: black;
-  font-size: 2.5rem;
-  font-weight: 200;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
-  .\+background-primary .ContentLayer__text h2 {
-    color: white; }
-
-.\+background-primary .ContentLayer__text p {
-  color: white; }
-
-.Layer {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% auto; }
-  .Layer.\--about-aceable {
-    background-image: url("../img/AboutAceable-bg.jpg"); }
-  .Layer.\--footer {
-    background-color: white; }
-  .Layer.\--testimonials {
-    background-image: url("../img/Testimonials-bg.jpg"); }
-
-.MainGraphic__content {
-  color: white; }
-  .MainGraphic__content h1 {
-    font-size: 2.5rem;
-    font-weight: 200;
-    text-transform: uppercase; }
-
-.MainGraphic__wrapper {
-  background-color: black;
-  background-image: url("../img/MainGraphic-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  padding: 2rem 0; }
-
-.Nav__link {
-  -webkit-transition: 256ms all;
-  transition: 256ms all;
-  color: black; }
-  .Nav__link:hover {
-    color: #12BDCD; }
-
-.Nav__list {
-  font-size: 0.875rem;
-  margin-bottom: auto;
-  margin-top: auto;
-  text-transform: uppercase; }
-
-.Nav__wrapper {
-  -webkit-transition: 256ms all;
-  transition: 256ms all;
-  background-color: white;
-  padding: 1rem;
-  position: relative;
-  width: 100%;
-  z-index: 1030; }
-  .Nav__wrapper.\--scrolled-below {
-    box-shadow: 0 0.25rem 0.5rem #373a3c;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 0; }
-
 .Button {
   -webkit-transition: 256ms all;
   transition: 256ms all;
@@ -7249,6 +7181,84 @@ a.text-danger:focus, a.text-danger:hover {
   .Button.\+small {
     font-size: 0.875rem; }
 
+.Card {
+  background-color: white;
+  color: #808080;
+  position: relative; }
+  .Card h3 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+  .Card.\--testimonial {
+    padding-top: 3.5rem !important; }
+
+.ContentLayer__text h2 {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  .\+background-primary .ContentLayer__text h2 {
+    color: white; }
+
+.\+background-primary .ContentLayer__text p {
+  color: white; }
+
+.Layer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto; }
+  .Layer.\--about-aceable {
+    background-image: url("../img/AboutAceable-bg.jpg"); }
+  .Layer.\--footer {
+    background-color: white; }
+  .Layer.\--testimonials {
+    background-image: url("../img/Testimonials-bg.jpg"); }
+
+.MainGraphic__content {
+  color: white; }
+  .MainGraphic__content h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    text-transform: uppercase; }
+
+.MainGraphic__wrapper {
+  background-color: black;
+  background-image: url("../img/MainGraphic-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 2rem 0; }
+
+.Nav__link {
+  -webkit-transition: 256ms all;
+  transition: 256ms all;
+  color: black; }
+  .Nav__link:hover {
+    color: #12BDCD; }
+
+.Nav__list {
+  font-size: 0.875rem;
+  margin-bottom: auto;
+  margin-top: auto;
+  text-transform: uppercase; }
+
+.Nav__wrapper {
+  -webkit-transition: 256ms all;
+  transition: 256ms all;
+  background-color: white;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  z-index: 1030; }
+  .Nav__wrapper.\--scrolled-below {
+    box-shadow: 0 0.25rem 0.5rem #373a3c;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0; }
+
 .Testimonial__image {
   border-radius: 50%;
   display: block;
@@ -7263,9 +7273,6 @@ a.text-danger:focus, a.text-danger:hover {
 
 .Testimonial__source {
   color: black; }
-
-.\+background-primary {
-  background-color: #12BDCD; }
 
 .purchase-retail {
   color: #818a91;
