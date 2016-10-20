@@ -4838,7 +4838,7 @@ a.text-danger:focus, a.text-danger:hover {
     display: none !important; } }
 
 @media (max-width: 767px) {
-  .hidden-sm-down {
+  .hidden-sm-down, .Nav__list {
     display: none !important; } }
 
 @media (min-width: 768px) {
@@ -7147,6 +7147,7 @@ a.text-danger:focus, a.text-danger:hover {
   z-index: 1030; }
   .Nav__wrapper.\--scrolled-below {
     box-shadow: 0 0.25rem 0.5rem #373a3c;
+    padding: 0.5rem 1rem;
     position: fixed;
     top: 0; }
 

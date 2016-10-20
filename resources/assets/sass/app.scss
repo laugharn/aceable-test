@@ -160,6 +160,7 @@ $body-bg: $gray-lightest;
 
     &__list {
         @extend .col-md-10;
+        @extend .hidden-sm-down;
         @extend .list-inline;
         @extend .text-xs-right;
 
@@ -195,7 +196,7 @@ $body-bg: $gray-lightest;
 
         &.\--scrolled-below {
             box-shadow: 0 ($spacer / 4) ($spacer / 2) $gray-dark;
-            //padding: ($spacer / 2) $spacer;
+            padding: ($spacer / 2) $spacer;
             position: fixed;
                 top: 0;
         }
