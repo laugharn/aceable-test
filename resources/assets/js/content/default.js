@@ -40,7 +40,7 @@ export default {
             p: 'The most effortless way to earn your alcohol server certification - <strong>right from home</strong>'
         },
         video: {
-            id: 'B5YNiCfWC3A'
+            id: 'tUOfAF4va6s'
         }
     },
     nav: {

@@ -9,7 +9,7 @@ export default {
     ab_test_2: {
         mainGraphic: {
             video: {
-                id: '_5jnn1AIt7Q'
+                id: 'B5YNiCfWC3A'
             }
         }
     },
