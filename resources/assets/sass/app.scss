@@ -52,9 +52,15 @@
     @extend .p-a-1;
     @extend .text-xs-center;
 
+    @include default-transition();
+
     background-color: white;
     color: $gray-less-dark;
     position: relative;
+
+    &:hover {
+        box-shadow: ($spacer / 2) ($spacer / 2) $spacer $gray;
+    }
 
     h3 {
         color: black;
@@ -128,10 +134,15 @@
 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% auto;
 
     &.\--about-aceable {
-        background-image: url('../img/AboutAceable-bg.jpg');
+        @include media-breakpoint-down(sm) {
+            background-color: $brand-primary;
+        };
+
+        @include media-breakpoint-up(md) {
+            background-image: url('../img/AboutAceable-bg.jpg');
+        };
     }
 
     &.\--footer {
@@ -139,7 +150,13 @@
     }
 
     &.\--testimonials {
-        background-image: url('../img/Testimonials-bg.jpg');
+        @include media-breakpoint-down(sm) {
+            background-color: $brand-primary;
+        };
+
+        @include media-breakpoint-up(md) {
+            background-image: url('../img/Testimonials-bg.jpg');
+        };
     }
 }
 
@@ -150,6 +167,8 @@
         @extend .col-md-5;
         @extend .col-xs-12;
         @extend .p-a-1;
+        @extend .text-xs-center;
+        @extend .text-md-left;
 
         color: white;
 
@@ -167,8 +186,11 @@
     }
 
     &__wrapper {
+        @include media-breakpoint-up(md) {
+            background-image: url('../img/MainGraphic-bg.jpg');
+        };
+
         background-color: black;
-        background-image: url('../img/MainGraphic-bg.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% auto;

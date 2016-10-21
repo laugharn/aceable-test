@@ -4737,7 +4737,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-xs-right, .Nav__list {
   text-align: right !important; }
 
-.text-xs-center, .Card, .ContentLayer__text {
+.text-xs-center, .Card, .ContentLayer__text, .MainGraphic__content {
   text-align: center !important; }
 
 @media (min-width: 544px) {
@@ -4749,7 +4749,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
     text-align: center !important; } }
 
 @media (min-width: 768px) {
-  .text-md-left {
+  .text-md-left, .MainGraphic__content {
     text-align: left !important; }
   .text-md-right {
     text-align: right !important; }
@@ -7213,9 +7213,13 @@ a.text-danger:focus, a.text-danger:hover {
       border-color: #f0ad4e; }
 
 .Card {
+  -webkit-transition: 256ms all;
+  transition: 256ms all;
   background-color: white;
   color: #808080;
   position: relative; }
+  .Card:hover {
+    box-shadow: 0.5rem 0.5rem 1rem #bfbfbf; }
   .Card h3 {
     color: black;
     font-size: 1.5rem;
@@ -7239,14 +7243,21 @@ a.text-danger:focus, a.text-danger:hover {
 
 .Layer {
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% auto; }
-  .Layer.\--about-aceable {
-    background-image: url("../img/AboutAceable-bg.jpg"); }
+  background-repeat: no-repeat; }
+  @media (max-width: 767px) {
+    .Layer.\--about-aceable {
+      background-color: #12BDCD; } }
+  @media (min-width: 768px) {
+    .Layer.\--about-aceable {
+      background-image: url("../img/AboutAceable-bg.jpg"); } }
   .Layer.\--footer {
     background-color: white; }
-  .Layer.\--testimonials {
-    background-image: url("../img/Testimonials-bg.jpg"); }
+  @media (max-width: 767px) {
+    .Layer.\--testimonials {
+      background-color: #12BDCD; } }
+  @media (min-width: 768px) {
+    .Layer.\--testimonials {
+      background-image: url("../img/Testimonials-bg.jpg"); } }
 
 .MainGraphic__content {
   color: white; }
@@ -7257,11 +7268,13 @@ a.text-danger:focus, a.text-danger:hover {
 
 .MainGraphic__wrapper {
   background-color: black;
-  background-image: url("../img/MainGraphic-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding: 2rem 0; }
+  @media (min-width: 768px) {
+    .MainGraphic__wrapper {
+      background-image: url("../img/MainGraphic-bg.jpg"); } }
 
 .Nav__link {
   -webkit-transition: 256ms all;
